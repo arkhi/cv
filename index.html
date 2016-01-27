@@ -69,11 +69,11 @@
         </p>
 
         <p>
-            As a <em>traveler</em>, I like the idea of working remotely, be it close or far from the office. Traveling brought me the understanding different cultures can collaborate through openness and respect.
+            As a <em>traveller</em>, I like the idea of working remotely, be it close or far from the office. Travelling brought me the understanding different cultures can collaborate through openness and respect.
         </p>
 
         <p>
-            You can find extensive information about <a href="https://linkedin.com/in/fabienbasmaison">my professional background on LinkedIn</a>, some <a href="https://github.com/arkhi/">code on github</a>, and more <a href="http://arkhi.org/feed/juji">seredipitous gathering of things</a>.
+            You can find extensive information about <a href="https://linkedin.com/in/fabienbasmaison">my professional background on LinkedIn</a>, some <a href="https://github.com/arkhi/">code on github</a>, and more <a href="http://arkhi.org/feed/juji">serendipitous gathering of things</a>.
         </p>
 
         <hr>
@@ -116,7 +116,7 @@
                     </noscript>
                 </figure>
                 <p>
-                    2009: <a href="http://bodybag.me/">http://bodybag.me/</a> is a website for two dutch architects in Shanghai who started their fashion design company.
+                    2009: <a href="http://bodybag.me/">http://bodybag.me/</a> is a website for two Dutch architects in Shanghai who started their fashion design company.
                 </p>
             </li>
             <li class="projects__project projects__project--website">
@@ -187,7 +187,7 @@
                         To revamp the whole website by gradually moving the desktop features to a RWD version presented as the mobile version, then switching the desktop to the RWD website.
                     </li>
                     <li>
-                        To improve collaboration between graphic designer, marketing, support and development teams by providing live styleguides for reference.
+                        To improve collaboration between graphic designer, marketing, support and development teams by providing live style‑guides for reference.
                     </li>
                 </ul>
             </li>
@@ -201,7 +201,7 @@
                     </noscript>
                 </figure>
                 <p>
-                    2015~2016: <a href="http://juwai.com/">http://juwai.com/</a> is the main website of a few, dedicated to chinese buyers and real estate agents throughout the World.
+                    2015~2016: <a href="http://juwai.com/">http://juwai.com/</a> is the main website of a few, dedicated to Chinese buyers and real estate agents throughout the World.
                 </p>
                 <p>
                     I mainly worked on the <em>administrative side of the application</em>. We’ve started the process for a <em>global redesign of <a href="http://www.juwai.com">www.juwai.com</a></em> on December 2015. This should bring us closer to today’s standards in term of interface and interaction.
@@ -231,32 +231,23 @@
                 };
 
                 function findAllImages() {
-                    // console.log( $( cfg.selectorImages ) );
                     cfg.$noscripts = $( cfg.selectorScripts );
                     cfg.$images = $( cfg.$noscripts.text() ).filter( cfg.selectorImages );
                 }
 
                 function createPreviews() {
-                    // console.log( cfg.$images, cfg.$noscripts );
-
                     cfg.$images.each(function( index, imageText ) {
-                        // console.log( image );
-
                         var $image = $( imageText );
                         var $media = $( cfg.selectorMedia ).eq( index );
-
-                        console.log( $media );
 
                         $media.css({
                             'background-image': 'url(' + $image.data( 'src-xs' ) + ')'
                         });
 
-                        // Add dimemsions to preview based on the image proportions and actual width of the container.
+                        // Add dimensions to preview based on the image proportions and actual width of the container.
                         // Removed them once the image is loaded.
 
                         $image.on('load', function() {
-                            // console.log( this );
-
                             $media.append( this );
                         });
                     });
@@ -267,16 +258,12 @@
                         w: $( window ).innerWidth(),
                         h: $( window ).innerHeight()
                     };
-
-                    console.log( viewport );
                 }
 
                 function loadImagesByBatch( batch ) {
                 }
 
-                (function init(){
-                    console.log( 'starting…' );
-
+                (function init() {
                     findAllImages();
                     createPreviews();
                 })();
