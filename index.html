@@ -5,25 +5,98 @@
         <title>[Front End Developer] Fabien from China</title>
 
         <style type="text/css">
-            .bam { width:88%; min-width:20em; max-width:40em; margin:5em auto; line-height:1.5em; color:#311; background:#fffdfd }
-            .bam h2, .bam hr { padding:.5em 0 0; margin:2em 0 0; border-top:solid 2px #000; font-size:1.25em; text-transform:uppercase; }
-            .bam h3 { padding:.25em 0 0; margin:1.25em 0 0; font-size:1em }
-            .bam p, .bam li { padding:0; margin:.25em 0 .5em; font-size:1em }
-            .bam blockquote { background:#e6e6d0; margin-top:1em }
-            .bam blockquote ol, .bam blockquote ul { list-style-position:inside }
-            .bam ul, .bam ol { padding-left:0 }
-            .bam ul ul, .bam ol ul { list-style-type:square }
-            .bam ol ol { list-style-type:lower-alpha }
-            .bam ul ul, .bam ul ol, .bam ol ul, .bam ol ol { padding-left:1em }
-            .bam hr { border-style:solid none none }
-            .bam code { color:#060 }
-            .bam a { font-weight:bolder; color:#000 }
-            .bam a:hover { color:#f00 }
-            .bam address { padding-top:.5em; border-top:solid 2px #000; font-size:.8em }
-            .bam em { color:#f00 }
+            .bam {
+              width: 88%;
+              min-width: 20em;
+              max-width: 40em;
+              margin: 5em auto;
+              line-height: 1.5em;
+              font-family: helvetica, sans-serif;
+              color: #311;
+              background: #fffdfd;
+            }
+
+            .bam h2,
+            .bam hr {
+              padding: .5em 0 0;
+              border-bottom: solid 1px #bbb;
+              margin: 2em 0 0;
+              font-family: georgia, serif;
+              font-size: 1.2em;
+              font-style: italic;
+            }
+
+            .bam p,
+            .bam li {
+              padding: 0;
+              margin: .25em 0 .5em;
+              font-size: 1em;
+            }
+
+            .bam blockquote {
+              margin-top: 1em;
+              background: #e6e6d0;
+            }
+
+            .bam blockquote ol,
+            .bam blockquote ul {
+              list-style-position: inside;
+            }
+
+            .bam ul,
+            .bam ol {
+              padding-left: 0;
+            }
+
+            .bam ul ul,
+            .bam ol ul {
+              list-style-type: square;
+            }
+
+            .bam ol ol {
+              list-style-type: lower-alpha;
+            }
+
+            .bam ul ul,
+            .bam ul ol,
+            .bam ol ul,
+            .bam ol ol {
+              padding-left: 1em;
+            }
+
+            .bam hr {
+              border-style: solid none none;
+            }
+
+            .bam code {
+              color: #060;
+            }
+
+            .bam a {
+              font-weight: bolder;
+              color: #000;
+            }
+
+            .bam a:hover {
+              color: #f00;
+            }
+
+            .bam address {
+              padding-top: .5em;
+              border-top: solid 2px #000;
+              font-size: .8em;
+            }
+
+            .bam em {
+              color: #f00;
+            }
+
+            .projects {
+                list-style-type: none;
+            }
 
             .projects .projects__project {
-                margin-top: 5em;
+                margin-bottom: 5em;
             }
 
             .media {
@@ -55,7 +128,7 @@
             I’m <strong>Fabien, frontend developer, ascendant architect</strong>.
         </p>
         <p>
-            The former gives me a better understanding at how interface and people can work, the latter allows me to make these a reality.
+            The latter gives me a better understanding at how interface and people can work, the former allows me to make these a reality.
         </p>
 
         <hr>
@@ -69,21 +142,31 @@
         </p>
 
         <p>
-            As a <em>traveller</em>, I like the idea of working remotely, be it close or far from the office. Travelling brought me the understanding different cultures can collaborate through openness and respect.
+            As a <em>traveller</em>, I like the idea of working remotely, be it close to the office, or out in the wild.
         </p>
 
         <p>
             You can find extensive information about <a href="https://linkedin.com/in/fabienbasmaison">my professional background on LinkedIn</a>, some <a href="https://github.com/arkhi/">code on github</a>, and more <a href="http://arkhi.org/feed/juji">serendipitous gathering of things</a>.
         </p>
 
-        <hr>
+        <h2>What I like to do</h2>
 
-        <p>
-            Here are some projects I worked on:
-        </p>
+        <ul>
+            <li>Learn and find solutions to problems.</li>
+            <li>Iterate well planned small changes on big projects</li>
+            <li>Work on several little projects for different clients.</li>
+        </ul>
+
+        <h2>Who I like to work with</h2>
+
+        <p>Curious people who want to challenge requirements in order to make the project better.</p>
+
+        <h2>
+            Some projects I worked on
+        </h2>
 
         <ol class="projects">
-            <li class="projects__project projects__project--website">
+            <li class="projects__project">
                 <figure class="media">
                     <noscript class="media__fallback">
                         <img class="media__content" src="img/jpg/pompage.net.jpg" width="640" height="160" alt=""
@@ -92,10 +175,11 @@
                     </noscript>
                 </figure>
                 <p>
-                    2004: <a href="http://www.pompage.net/about">http://www.pompage.net/about</a> I didn’t design the website but I was maintaining it on my spare time, along with translating, proof‑reading and publishing. Being part of this team for 10 years has been awesome.
+                    2004 ~ 2014: <a href="http://www.pompage.net/about">http://www.pompage.net/about</a> I didn’t design the website but I was maintaining it on my spare time, along with translating, proof‑reading and publishing. Being part of this team for 10 years has been awesome and set the path I am still following to this day.
                 </p>
             </li>
-            <li class="projects__project projects__project--website">
+
+            <li class="projects__project">
                 <figure class="media">
                     <noscript class="media__fallback">
                         <img class="media__content" src="img/jpg/paris-web.fr.jpg" width="640" height="160" alt=""
@@ -104,10 +188,11 @@
                     </noscript>
                 </figure>
                 <p>
-                    2008: <a href="http://www.paris-web.fr/2008/">http://www.paris-web.fr/2008/</a> when I was part of the team. The whole process correlated to the event was fun to do. Working remotely was also challenging with people in France, New‑Caledonia and me in China.
+                    2006 ~ 2009: As part of <a href="https://paris-web.fr/">Paris Web</a> team, I participated to the organization and integration of the related websites. The whole process was fun! Helping speakers before, during and after the event was one of the most rewarding experiences ever. It was also a nice introduction to working remotely, with people in France, New‑Caledonia and China.
                 </p>
             </li>
-            <li class="projects__project projects__project--website">
+
+            <li class="projects__project">
                 <figure class="media">
                     <noscript class="media__fallback">
                         <img class="media__content" src="img/jpg/bodybag.me.jpg" width="640" height="160" alt=""
@@ -119,7 +204,8 @@
                     2009: <a href="http://bodybag.me/">http://bodybag.me/</a> is a website for two Dutch architects in Shanghai who started their fashion design company.
                 </p>
             </li>
-            <li class="projects__project projects__project--website">
+
+            <li class="projects__project">
                 <figure class="media">
                     <noscript class="media__fallback">
                         <img class="media__content" src="img/jpg/flipmood.com.jpg" width="640" height="160" alt=""
@@ -128,10 +214,11 @@
                     </noscript>
                 </figure>
                 <p>
-                    2010: <a href="https://web.archive.org/web/http://flipmood.com/">http://flipmood.com/</a> was a website for friends that wanted to promote their creative works.
+                    2010: <a href="https://web.archive.org/web/http://flipmood.com/">http://flipmood.com/</a> was a website for friends that wanted to promote their creative works. Working with these two was amazingly insightful about what can be expected from good graphic designers.
                 </p>
             </li>
-            <li class="projects__project projects__project--website">
+
+            <li class="projects__project">
                 <figure class="media">
                     <noscript class="media__fallback">
                         <img class="media__content" src="img/jpg/china-europa-forum.net.jpg" width="640" height="160" alt=""
@@ -140,10 +227,11 @@
                     </noscript>
                 </figure>
                 <p>
-                    2010: <a href="http://china-europa-forum.net/">http://china-europa-forum.net/</a> is an initiative to push for exchange and support between Europe and China, on a lot of different topics. I coded the whole site at the time, but the actual version saw some HTML content added by a third part which can break the layout.
+                    2010: <a href="http://china-europa-forum.net/">http://china-europa-forum.net/</a> is an initiative to push for exchange and support between Europe and China, on a lot of different topics. I coded the frontend and CMS of the site at the time; the actual version saw some HTML content added by a third part which can break the layout.
                 </p>
             </li>
-            <li class="projects__project projects__project--website">
+
+            <li class="projects__project">
                 <figure class="media">
                     <noscript class="media__fallback">
                         <img class="media__content" src="img/jpg/skyview.asia.jpg" width="640" height="160" alt=""
@@ -152,10 +240,11 @@
                     </noscript>
                 </figure>
                 <p>
-                    2011: <a href="https://web.archive.org/web/http://skyview.asia/spip.php?article14">http://www.skyview.asia/</a> was a command from a friend. The concept was simplicity and fullscreen.
+                    2011: <a href="https://web.archive.org/web/http://skyview.asia/spip.php?article14">http://www.skyview.asia/</a> was a command from a friend. The concept was <i>simplicity</i> and <i>fullscreen</i>.
                 </p>
             </li>
-            <li class="projects__project projects__project--website">
+
+            <li class="projects__project">
                 <figure class="media">
                     <noscript class="media__fallback">
                         <img class="media__content" src="img/jpg/poppen.de.jpg" width="640" height="160" alt=""
@@ -164,10 +253,11 @@
                     </noscript>
                 </figure>
                 <p>
-                    2010~2012: (<abbr title="Not Safe For Work">NSFW</abbr>) <a href="http://poppen.de/"> http://poppen.de/</a> is part of what my previous company is doing. There’s more than 3 millions registered users which makes it a very interesting challenge as any change we make has a real impact.
+                    2010~2012: (<abbr title="Not Safe For Work">NSFW</abbr>) <a href="http://poppen.de/">http://poppen.de/</a> is part of what my previous company is doing. There’s more than 3 millions registered users which makes it a very interesting challenge as any change made has a real impact.
                 </p>
             </li>
-            <li class="projects__project projects__project--website">
+
+            <li class="projects__project">
                 <figure class="media">
                     <noscript class="media__fallback">
                         <img class="media__content" src="img/jpg/kaufmich.com.jpg" width="640" height="160" alt=""
@@ -176,15 +266,15 @@
                     </noscript>
                 </figure>
                 <p>
-                    2012~2014: (<abbr>NSFW</abbr>) On <a href="http://kaufmich.com/">http://kaufmich.com/</a>, I cleaned legacy code as much as possible while adding more features to the website. That was the biggest challenge as quite a few people have been adding more and more complexity to markup and CSS.
+                    2012~2014: (<abbr>NSFW</abbr>) On <a href="http://kaufmich.com/">http://kaufmich.com/</a>, my biggest challenge was to clean legacy code while adding more features to the website. Considering the amount of people and code added through the years, it was <i>quite some fun</i>!
                 </p>
                 <p>
-                    Using grunt, sass and a PHP version of KSS, I started the HTML/CSS integration of a <a href="http://www.kaufmich.com/m/user/register">mobile first version</a> based on <abbr title="Responsive Web Design">RWD</abbr> before I left in September. This was the first stone of multiple goals:
+                    Using grunt, sass and a PHP version of <a href="http://warpspire.com/kss/"><abbr title="Knyle Style Sheets">KSS</abbr></a>, I started the HTML &amp; CSS integration of a <a href="http://www.kaufmich.com/m/user/register">mobile first version</a> based on <abbr title="Responsive Web Design">RWD</abbr> before I left in September. This was the first stone of multiple goals:
                 </p>
 
                 <ul>
                     <li>
-                        To revamp the whole website by gradually moving the desktop features to a RWD version presented as the mobile version, then switching the desktop to the RWD website.
+                        To revamp the whole website by gradually moving the desktop features to a <abbr>RWD</abbr> version presented as the mobile version, then switching the desktop to the <abbr>RWD</abbr> website.
                     </li>
                     <li>
                         To improve collaboration between graphic designer, marketing, support and development teams by providing live style‑guides for reference.
@@ -192,7 +282,7 @@
                 </ul>
             </li>
 
-            <li class="projects__project projects__project--website">
+            <li class="projects__project">
                 <figure class="media">
                     <noscript class="media__fallback">
                         <img class="media__content" src="img/jpg/juwai.com.jpg" width="640" height="160" alt=""
