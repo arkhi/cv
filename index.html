@@ -5,7 +5,7 @@
         <title>[Front End Developer] Fabien from China</title>
 
         <style type="text/css">
-            .bam {
+            body {
               width: 88%;
               min-width: 20em;
               max-width: 40em;
@@ -16,8 +16,8 @@
               background: #fffdfd;
             }
 
-            .bam h2,
-            .bam hr {
+            h2,
+            hr {
               padding: .5em 0 0;
               border-bottom: solid 1px #bbb;
               margin: 2em 0 0;
@@ -26,68 +26,29 @@
               font-style: italic;
             }
 
-            .bam p,
-            .bam li {
+            hr {
+              border-style: solid none none;
+            }
+
+            p,
+            li {
               padding: 0;
               margin: .25em 0 .5em;
               font-size: 1em;
             }
 
-            .bam blockquote {
-              margin-top: 1em;
-              background: #e6e6d0;
-            }
-
-            .bam blockquote ol,
-            .bam blockquote ul {
-              list-style-position: inside;
-            }
-
-            .bam ul,
-            .bam ol {
+            ul,
+            ol {
               padding-left: 0;
             }
 
-            .bam ul ul,
-            .bam ol ul {
-              list-style-type: square;
-            }
-
-            .bam ol ol {
-              list-style-type: lower-alpha;
-            }
-
-            .bam ul ul,
-            .bam ul ol,
-            .bam ol ul,
-            .bam ol ol {
-              padding-left: 1em;
-            }
-
-            .bam hr {
-              border-style: solid none none;
-            }
-
-            .bam code {
-              color: #060;
-            }
-
-            .bam a {
+            a {
               font-weight: bolder;
               color: #000;
             }
 
-            .bam a:hover {
-              color: #f00;
-            }
-
-            .bam address {
-              padding-top: .5em;
-              border-top: solid 2px #000;
-              font-size: .8em;
-            }
-
-            .bam em {
+            a:hover,
+            em {
               color: #f00;
             }
 
@@ -99,22 +60,11 @@
                 margin-bottom: 5em;
             }
 
-            .media {
+            .illustration {
                 margin: 0;
-                max-width:100%; 
+                border: solid 1px #bbb;
+                max-width: 100%; 
                 height: auto;
-            }
-
-            .media--640x160 {
-                width: 640px;
-                height: 160px;
-            }
-
-            .media__content {
-                width: 100%;
-                height: 100%;
-                /*display: block;*/
-                /*border: solid 1px #311;*/
             }
         </style>
     </head>
@@ -167,104 +117,56 @@
 
         <ol class="projects">
             <li class="projects__project">
-                <figure class="media">
-                    <noscript class="media__fallback">
-                        <img class="media__content" src="img/jpg/pompage.net.jpg" width="640" height="160" alt=""
-                            style="background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAMAAAAoyzS7AAAAA1BMVEXGsZFIjusDAAAACklEQVR4AWNgAAAAAgABc3UBGAAAAABJRU5ErkJggg==)"
-                        >
-                    </noscript>
-                </figure>
+                <img class="illustration" src="img/jpg/pompage.net.jpg" width="640" height="160" alt="">
                 <p>
                     2004 ~ 2014: <a href="http://www.pompage.net/about">http://www.pompage.net/about</a> I didn’t design the website but I was maintaining it on my spare time, along with translating, proof‑reading and publishing. Being part of this team for 10 years has been awesome and set the path I am still following to this day.
                 </p>
             </li>
 
             <li class="projects__project">
-                <figure class="media">
-                    <noscript class="media__fallback">
-                        <img class="media__content" src="img/jpg/paris-web.fr.jpg" width="640" height="160" alt=""
-                            style="background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAMAAAAoyzS7AAAAA1BMVEVLtuTOTXCkAAAACklEQVR4AWNgAAAAAgABc3UBGAAAAABJRU5ErkJggg==)"
-                        >
-                    </noscript>
-                </figure>
+                <img class="illustration" src="img/jpg/paris-web.fr.jpg" width="640" height="160" alt="">
                 <p>
                     2006 ~ 2009: As part of <a href="https://paris-web.fr/">Paris Web</a> team, I participated to the organization and integration of the related websites. The whole process was fun! Helping speakers before, during and after the event was one of the most rewarding experiences ever. It was also a nice introduction to working remotely, with people in France, New‑Caledonia and China.
                 </p>
             </li>
 
             <li class="projects__project">
-                <figure class="media">
-                    <noscript class="media__fallback">
-                        <img class="media__content" src="img/jpg/bodybag.me.jpg" width="640" height="160" alt=""
-                            style="background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAAAAAA6fptVAAAACXBIWXMAAAsTAAALEwEAmpwYAAAACklEQVQIHWOIBQAAXwBeMPq9oAAAAABJRU5ErkJggg==)"
-                        >
-                    </noscript>
-                </figure>
+                <img class="illustration" src="img/jpg/bodybag.me.jpg" width="640" height="160" alt="">
                 <p>
                     2009: <a href="http://bodybag.me/">http://bodybag.me/</a> is a website for two Dutch architects in Shanghai who started their fashion design company.
                 </p>
             </li>
 
             <li class="projects__project">
-                <figure class="media">
-                    <noscript class="media__fallback">
-                        <img class="media__content" src="img/jpg/flipmood.com.jpg" width="640" height="160" alt=""
-                            style="background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAMAAAAoyzS7AAAAA1BMVEUbODHxSM2KAAAACklEQVR4AWNgAAAAAgABc3UBGAAAAABJRU5ErkJggg==)"
-                        >
-                    </noscript>
-                </figure>
+                <img class="illustration" src="img/jpg/flipmood.com.jpg" width="640" height="160" alt="">
                 <p>
                     2010: <a href="https://web.archive.org/web/http://flipmood.com/">http://flipmood.com/</a> was a website for friends that wanted to promote their creative works. Working with these two was amazingly insightful about what can be expected from good graphic designers.
                 </p>
             </li>
 
             <li class="projects__project">
-                <figure class="media">
-                    <noscript class="media__fallback">
-                        <img class="media__content" src="img/jpg/china-europa-forum.net.jpg" width="640" height="160" alt=""
-                            style="background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAMAAAAoyzS7AAAAA1BMVEXawbeggE0cAAAACklEQVR4AWNgAAAAAgABc3UBGAAAAABJRU5ErkJggg==)"
-                        >
-                    </noscript>
-                </figure>
+                <img class="illustration" src="img/jpg/china-europa-forum.net.jpg" width="640" height="160" alt="">
                 <p>
                     2010: <a href="http://china-europa-forum.net/">http://china-europa-forum.net/</a> is an initiative to push for exchange and support between Europe and China, on a lot of different topics. I coded the frontend and CMS of the site at the time; the actual version saw some HTML content added by a third part which can break the layout.
                 </p>
             </li>
 
             <li class="projects__project">
-                <figure class="media">
-                    <noscript class="media__fallback">
-                        <img class="media__content" src="img/jpg/skyview.asia.jpg" width="640" height="160" alt=""
-                            style="background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAMAAAAoyzS7AAAAA1BMVEVaZGiEqdF1AAAACklEQVR4AWNgAAAAAgABc3UBGAAAAABJRU5ErkJggg==)"
-                        >
-                    </noscript>
-                </figure>
+                <img class="illustration" src="img/jpg/skyview.asia.jpg" width="640" height="160" alt="">
                 <p>
                     2011: <a href="https://web.archive.org/web/http://skyview.asia/spip.php?article14">http://www.skyview.asia/</a> was a command from a friend. The concept was <i>simplicity</i> and <i>fullscreen</i>.
                 </p>
             </li>
 
             <li class="projects__project">
-                <figure class="media">
-                    <noscript class="media__fallback">
-                        <img class="media__content" src="img/jpg/poppen.de.jpg" width="640" height="160" alt=""
-                            style="background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAMAAAAoyzS7AAAAA1BMVEWSlpJg946wAAAACklEQVR4AWNgAAAAAgABc3UBGAAAAABJRU5ErkJggg==)"
-                        >
-                    </noscript>
-                </figure>
+                <img class="illustration" src="img/jpg/poppen.de.jpg" width="640" height="160" alt="">
                 <p>
                     2010~2012: (<abbr title="Not Safe For Work">NSFW</abbr>) <a href="http://poppen.de/">http://poppen.de/</a> is part of what my previous company is doing. There’s more than 3 millions registered users which makes it a very interesting challenge as any change made has a real impact.
                 </p>
             </li>
 
             <li class="projects__project">
-                <figure class="media">
-                    <noscript class="media__fallback">
-                        <img class="media__content" src="img/jpg/kaufmich.com.jpg" width="640" height="160" alt=""
-                            style="background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAMAAAAoyzS7AAAAA1BMVEWAc3OLUSzpAAAACklEQVR4AWNgAAAAAgABc3UBGAAAAABJRU5ErkJggg==)"
-                        >
-                    </noscript>
-                </figure>
+                <img class="illustration" src="img/jpg/kaufmich.com.jpg" width="640" height="160" alt="">
                 <p>
                     2012~2014: (<abbr>NSFW</abbr>) On <a href="http://kaufmich.com/">http://kaufmich.com/</a>, my biggest challenge was to clean legacy code while adding more features to the website. Considering the amount of people and code added through the years, it was <i>quite some fun</i>!
                 </p>
@@ -283,13 +185,7 @@
             </li>
 
             <li class="projects__project">
-                <figure class="media">
-                    <noscript class="media__fallback">
-                        <img class="media__content" src="img/jpg/juwai.com.jpg" width="640" height="160" alt=""
-                            style="background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAMAAAAoyzS7AAAAA1BMVEW0oqQop9KMAAAACklEQVR4AWNgAAAAAgABc3UBGAAAAABJRU5ErkJggg==)"
-                        >
-                    </noscript>
-                </figure>
+                <img class="illustration" src="img/jpg/juwai.com.jpg" width="640" height="160" alt="">
                 <p>
                     2015~2016: <a href="http://juwai.com/">http://juwai.com/</a> is the main website of a few, dedicated to Chinese buyers and real estate agents throughout the World.
                 </p>
@@ -304,60 +200,5 @@
         <p>
             In the hope of hearing of you soon, I wish you a very good day!
         </p>
-
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-
-        <script>
-            (function() {
-                'use strict';
-
-                var cfg = {
-                    'imgPerBatch':     3,
-                    'selectorMedia':   '.media',
-                    'selectorScripts': '.media noscript',
-                    'selectorImages':  '.media__content',
-                    '$noscripts':      null,
-                    '$images':         null
-                };
-
-                function findAllImages() {
-                    cfg.$noscripts = $( cfg.selectorScripts );
-                    cfg.$images = $( cfg.$noscripts.text() ).filter( cfg.selectorImages );
-                }
-
-                function createPreviews() {
-                    cfg.$images.each(function( index, imageText ) {
-                        var $image = $( imageText );
-                        var $media = $( cfg.selectorMedia ).eq( index );
-
-                        $media.css({
-                            'background-image': 'url(' + $image.data( 'src-xs' ) + ')'
-                        });
-
-                        // Add dimensions to preview based on the image proportions and actual width of the container.
-                        // Removed them once the image is loaded.
-
-                        $image.on('load', function() {
-                            $media.append( this );
-                        });
-                    });
-                }
-
-                function getBatches() {
-                    var viewport = {
-                        w: $( window ).innerWidth(),
-                        h: $( window ).innerHeight()
-                    };
-                }
-
-                function loadImagesByBatch( batch ) {
-                }
-
-                (function init() {
-                    findAllImages();
-                    createPreviews();
-                })();
-            })();
-        </script>
     </body>
 </html>
