@@ -7,6 +7,11 @@
 (function() {
     'use strict';
 
+    /**
+     * Header contructor
+     *
+     * @param {Object} domObject DOM object.
+     */
     function Header( domObject ) {
         if ( !( this instanceof Header ) ) {
             return new Header();
@@ -16,10 +21,13 @@
         this.$target = $( domObject );
     }
 
+    /**
+     * Fetch and add data to object.
+     *
+     * @return {Header}
+     */
     Header.prototype.fetchHeaderData = function fetchHeaderData() {
         var header = this;
-
-        console.log( header );
 
         header.tag   = header.dom.tagName.toLowerCase();
         header.title = header.$target.html();
@@ -28,17 +36,26 @@
         return header;
     };
 
+    /**
+     * Compute the top position of a header in percentage.
+     *
+     * @return {Header}
+     */
     Header.prototype.percentTop = function percentTop() {
         var header    = this;
         var $document = $( document );
 
         header.top = header.top * 100 / $document.innerHeight();
 
-        console.log( header.top );
-
         return header;
     };
 
+    /**
+     * Build the DOM structure for minimap headers and existing headers.
+     *
+     * @param  {Integer} index Index allowing to differentiate the header.
+     * @return {Header}
+     */
     Header.prototype.build = function build( index ) {
         var header = this;
 
@@ -61,6 +78,8 @@
 
     /**
      * Minimap contructor
+     *
+     * @return {Minimap}
      */
     function Minimap() {
         if ( !( this instanceof Minimap ) ) {
@@ -70,6 +89,8 @@
 
     /**
      * Build the minimap.
+     *
+     * @return {Minimap}
      */
     Minimap.prototype.build = function build() {
         var minimap = this;
@@ -83,8 +104,6 @@
             minimap.headers.push( $item );
         });
 
-        console.log( minimap.headers );
-
         this.$ = $( '<ul>', {
             'class': 'c-minimap'
         });
@@ -94,7 +113,11 @@
         return minimap;
     };
 
-
+    /**
+     * Initialize Minimap.
+     *
+     * @return {Minimap}
+     */
     Minimap.prototype.init = function init() {
         var minimap = this;
 
@@ -104,37 +127,4 @@
     };
 
     return new Minimap().init();
-
-    // var headers = [{
-    //     'title': 'Some title',
-    //     'level': 1,
-    //     'content': [
-    //         {
-    //             'title': 'Some title',
-    //             'level': 2,
-    //             'content': []
-    //         },
-    //         {
-    //             'title': 'Some title',
-    //             'level': 2,
-    //             'content': []
-    //         }
-    //     ]
-    // },
-    // {
-    //     'title': 'Some title',
-    //     'level': 1,
-    //     'content': [
-    //         {
-    //             'title': 'Some title',
-    //             'level': 2,
-    //             'content': []
-    //         },
-    //         {
-    //             'title': 'Some title',
-    //             'level': 2,
-    //             'content': []
-    //         }
-    //     ]
-    // }];
 })();
