@@ -2,25 +2,34 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>[Front End Developer] Fabien from China</title>
+        <title>Fabien Basmaison, Front End Developer</title>
+
+        <meta name="viewport" content="width=device-width">
 
         <style type="text/css">
             body {
-              width: 88%;
-              max-width: 40em;
-              padding: 0 6%;
-              margin: 5em auto;
-              line-height: 1.5em;
-              font-family: helvetica, sans-serif;
-              color: #311;
-              background: #fffdfd;
+                max-width: 40em;
+                padding:  1.5em;
+                margin: 5em auto;
+                margin: 2vw auto;
+                line-height: 1.5em;
+                font-family: helvetica, sans-serif;
+                color: #311;
+                background: #fffdfd;
+            }
+
+            @media screen and (min-width: 40em) {
+                body {
+                    width: 90%;
+                    font-size: 1.25rem;
+                }
             }
 
             h2,
             hr {
               padding: .5em 0 0;
               border-bottom: solid 1px #bbb;
-              margin: 2em 0 0;
+              margin: 2em 0 1em;
               font-family: georgia, serif;
               font-size: 1.2em;
               font-style: italic;
@@ -60,12 +69,104 @@
                 margin-bottom: 5em;
             }
 
+            /* Titles as anchors for projects. Visually hidden. */
+            /* Add a top margin to not stick content to the top of the viewport when scrolling. */
+            .projects .projects__title {
+                position: absolute;
+                top: auto;
+                left: -10000px;
+                width: 1px;
+                height: 1px;
+                margin: -1em 0 0;
+                overflow: hidden;
+            }
+
             .illustration {
                 display: block;
                 max-width: 100%;
                 height: auto;
-                margin: 0;
+                margin: 0 0 1em;
                 outline: solid 1px #bbb;
+            }
+
+            .c-minimap {
+                display: none;
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                width: 5%;
+                margin: 0;
+                list-style: none;
+                border-left: solid 1px #ccc;
+                background: #fff;
+                /*opacity: 0.1;*/
+                transition: opacity .25s;
+            }
+
+            @media screen and (min-width: 40em) {
+                .c-minimap {
+                    display: block;
+                }
+            }
+
+            .c-minimap:focus,
+            .c-minimap:hover {
+                opacity: 1;
+            }
+
+            .c-minimap__link {
+                position: absolute;
+                width: 100% ;
+                height: 1em;
+            }
+
+            .c-minimap__link:before,
+            .c-minimap__link:after {
+                display: none;
+                position: absolute;
+                top: 50%;
+                right: 100%;
+            }
+
+            .c-minimap__link:after {
+                padding: 0 .5em;
+                border-radius: 3px;
+                margin-top: -1em;
+                margin-right: 1em;
+                font-size: .75em;
+                white-space: nowrap;
+                color: #fff;
+                background-color: #666;
+                content: attr(title);
+            }
+
+            .c-minimap__link:before {
+                border: solid .5em transparent;
+                border-left-color: #666;
+                margin-top: -.5em;
+                content: '';
+            }
+
+            .c-minimap__link:focus,
+            .c-minimap__link:hover {
+                padding: 1em 0;
+                margin-top: -1em;
+            }
+
+            .c-minimap__link:focus:after,
+            .c-minimap__link:focus:before,
+            .c-minimap__link:hover:after,
+            .c-minimap__link:hover:before {
+                display: block;
+            }
+
+            .c-minimap__h2 {
+                background-color: #666;
+            }
+
+            .c-minimap__h3 {
+                background-color: #999;
             }
         </style>
     </head>
@@ -76,8 +177,9 @@
         </p>
 
         <p>
-            I’m <strong>Fabien, frontend developer, ascendant architect</strong>.
+            I’m <strong>Fabien, frontend developer, former architect</strong>.
         </p>
+
         <p>
             The latter gives me a better understanding at how interface and people can work, the former allows me to make these a reality.
         </p>
@@ -89,7 +191,7 @@
         </p>
 
         <p>
-            As a <em>former architect</em>, I also have a sense for graphics and structure, and a fair understanding of how human interact with objects.
+            As a <em>former architect</em>, I also have a sense for graphics and structure, and a fair understanding of how people interact with objects.
         </p>
 
         <p>
@@ -100,86 +202,107 @@
             You can find extensive information about <a href="https://linkedin.com/in/fabienbasmaison">my professional background on LinkedIn</a>, some <a href="https://github.com/arkhi/">code on github</a>, and more <a href="http://arkhi.org/feed/juji">serendipitous gathering of things</a>.
         </p>
 
-        <h2>What I like</h2>
+        <h2>What I like to do</h2>
 
         <ul>
-            <li>Learn</li>
-            <li>Find solutions to problems.</li>
-            <li>Iterate well planned small changes on big projects</li>
+            <li>Learn and find solutions to problems.</li>
+            <li>Iterate well planned small changes on big projects.</li>
             <li>Work on several little projects for different clients.</li>
+            <li>Use semantic code and microdata.</li>
+            <li>Improve workflows.</li>
         </ul>
 
         <h2>Who I like to work with</h2>
 
-        <p>Curious people who want to challenge requirements in order to make the project better.</p>
+        <ul>
+            <li>Curious people who want to challenge requirements.</li>
+            <li>People who share and listen.</li>
+            <li>People who take their work very seriously and don’t take themselves too seriously.</li>
+        </ul>
 
-        <h2>Some projects I worked on</h2>
+        <div class="projects">
+            <h2>Some projects I worked on</h2>
 
-        <ol class="projects">
-            <li class="projects__project">
+            <div class="projects__project">
+                <h3 class="projects__title">pompage.net</h3>
+
                 <a href="http://www.pompage.net/about">
                     <img class="illustration" src="img/jpg/pompage.net.jpg" width="640" height="160" alt="">
                 </a>
                 <p>
-                    2004 ~ 2014: <a href="http://www.pompage.net/about">http://www.pompage.net/about</a> I didn’t design the website but I was maintaining it on my spare time, along with translating, proof‑reading and publishing. Being part of this team for 10 years has been awesome and set the path I am still following to this day.
+                    2004 ~&nbsp;2014: <a href="http://www.pompage.net/about">http://www.pompage.net/about</a> I didn’t design the website but I was maintaining it on my spare time, along with translating, proof‑reading and publishing. Being part of this team for 10 years has been awesome and set the path I am still following to this day.
                 </p>
-            </li>
+            </div>
 
-            <li class="projects__project">
+            <div class="projects__project">
+                <h3 class="projects__title">paris-web.fr</h3>
+
                 <a href="https://paris-web.fr/">
                     <img class="illustration" src="img/jpg/paris-web.fr.jpg" width="640" height="160" alt="">
                 </a>
                 <p>
-                    2006 ~ 2009: As part of <a href="https://paris-web.fr/">Paris Web</a> team, I participated to the organization and integration of the related websites. The whole process was fun! Helping speakers before, during and after the event was one of the most rewarding experiences ever. It was also a nice introduction to working remotely, with people in France, New‑Caledonia and China.
+                    2006 ~&nbsp;2009: As part of <a href="https://paris-web.fr/">Paris Web</a> team, I participated to the organization and integration of the related websites. The whole process was fun! Helping speakers before, during and after the event was one of the most rewarding experiences ever. It was also a nice introduction to working remotely, with people in France, New‑Caledonia and China.
                 </p>
-            </li>
+            </div>
 
-            <li class="projects__project">
+            <div class="projects__project">
+                <h3 class="projects__title">bodybag.me</h3>
+
                 <a href="http://bodybag.me/">
                     <img class="illustration" src="img/jpg/bodybag.me.jpg" width="640" height="160" alt="">
                 </a>
                 <p>
                     2009: <a href="http://bodybag.me/">http://bodybag.me/</a> is a website for two Dutch architects in Shanghai who started their fashion design company.
                 </p>
-            </li>
+            </div>
 
-            <li class="projects__project">
+            <div class="projects__project">
+                <h3 class="projects__title">flipmood.com</h3>
+
                 <a href="https://web.archive.org/web/http://flipmood.com/">
                     <img class="illustration" src="img/jpg/flipmood.com.jpg" width="640" height="160" alt="">
                 </a>
                 <p>
                     2010: <a href="https://web.archive.org/web/http://flipmood.com/">http://flipmood.com/</a> was a website for friends that wanted to promote their creative works. Working with these two was amazingly insightful about what can be expected from good graphic designers.
                 </p>
-            </li>
+            </div>
 
-            <li class="projects__project">
+            <div class="projects__project">
+                <h3 class="projects__title">china-europa-forum.net</h3>
+
                 <a href="http://china-europa-forum.net/">
                     <img class="illustration" src="img/jpg/china-europa-forum.net.jpg" width="640" height="160" alt="">
                 </a>
                 <p>
                     2010: <a href="http://china-europa-forum.net/">http://china-europa-forum.net/</a> is an initiative to push for exchange and support between Europe and China, on a lot of different topics. I coded the frontend and CMS of the site at the time; the actual version saw some HTML content added by a third part which can break the layout.
                 </p>
-            </li>
+            </div>
 
-            <li class="projects__project">
+            <div class="projects__project">
+                <h3 class="projects__title">skyview.asia</h3>
+
                 <a href="https://web.archive.org/web/http://skyview.asia/spip.php?article14">
                     <img class="illustration" src="img/jpg/skyview.asia.jpg" width="640" height="160" alt="">
                 </a>
                 <p>
                     2011: <a href="https://web.archive.org/web/http://skyview.asia/spip.php?article14">http://www.skyview.asia/</a> was a command from a friend. The concept was <i>simplicity</i> and <i>fullscreen</i>.
                 </p>
-            </li>
+            </div>
 
-            <li class="projects__project">
+            <div class="projects__project">
+                <h3 class="projects__title">poppen.de</h3>
+
                 <a href="http://poppen.de/">
                     <img class="illustration" src="img/jpg/poppen.de.jpg" width="640" height="160" alt="">
                 </a>
                 <p>
-                    2010~2012: (<abbr title="Not Safe For Work">NSFW</abbr>) <a href="http://poppen.de/">http://poppen.de/</a> is part of what my previous company is doing. There’s more than 3 millions registered users which makes it a very interesting challenge as any change made has a real impact.
+                    2010 ~&nbsp;2012: (<abbr title="Not Safe For Work">NSFW</abbr>) <a href="http://poppen.de/">http://poppen.de/</a> is part of what my previous company is doing. There’s more than 3 millions registered users which makes it a very interesting challenge as any change made has a real impact.
                 </p>
-            </li>
+            </div>
 
-            <li class="projects__project">
+            <div class="projects__project">
+                <h3 class="projects__title">kaufmich.com</h3>
+
                 <a href="http://kaufmich.com/">
                     <img class="illustration" src="img/jpg/kaufmich.com.jpg" width="640" height="160" alt="">
                 </a>
@@ -189,7 +312,7 @@
                 <p>
                     Using grunt, sass and a PHP version of <a href="http://warpspire.com/kss/"><abbr title="Knyle Style Sheets">KSS</abbr></a>, I started the HTML &amp; CSS integration of a <a href="http://www.kaufmich.com/m/user/register">mobile first version</a> based on <abbr title="Responsive Web Design">RWD</abbr> before I left in September. This was the first stone of multiple goals:
                 </p>
-
+            
                 <ul>
                     <li>
                         To revamp the whole website by gradually moving the desktop features to a <abbr>RWD</abbr> version presented as the mobile version, then switching the desktop to the <abbr>RWD</abbr> website.
@@ -198,9 +321,11 @@
                         To improve collaboration between graphic designer, marketing, support and development teams by providing live style‑guides for reference.
                     </li>
                 </ul>
-            </li>
+            </div>
 
-            <li class="projects__project">
+            <div class="projects__project">
+                <h3 class="projects__title">juwai.com</h3>
+
                 <a href="http://juwai.com/">
                     <img class="illustration" src="img/jpg/juwai.com.jpg" width="640" height="160" alt="">
                 </a>
@@ -210,13 +335,18 @@
                 <p>
                     I mainly worked on the <em>administrative side of the application</em>. We’ve started the process for a <em>global redesign of <a href="http://www.juwai.com">www.juwai.com</a></em> on December 2015. This should bring us closer to today’s standards in term of interface and interaction.
                 </p>
-            </li>
-        </ol>
+            </div>
+        </div>
 
         <hr>
 
         <p>
             In the hope of hearing of you soon, I wish you a very good day!
         </p>
+
+        <script src="http://code.jquery.com/jquery-2.2.2.min.js"
+            integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="
+            crossorigin="anonymous"></script>
+        <script src="Minimap.js"></script>
     </body>
 </html>
