@@ -14,7 +14,7 @@
      */
     function Header( domObject ) {
         if ( !( this instanceof Header ) ) {
-            return new Header();
+            return new Header( domObject );
         }
 
         this.dom     = domObject;
