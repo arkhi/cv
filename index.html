@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <title>Fabien Basmaison, Front End Developer</title>
+
+        <meta name="keywords" content="web, developer, frontend, resume, front-end" />
+        <meta name="author" content="Fabien Basmaison">
 
         <meta name="viewport" content="width=device-width">
 
@@ -27,38 +30,52 @@
 
             h2,
             hr {
-              padding: .5em 0 0;
-              border-bottom: solid 1px #bbb;
-              margin: 2em 0 1em;
-              font-family: georgia, serif;
-              font-size: 1.2em;
-              font-style: italic;
+                padding: .5em 0 0;
+                border-bottom: solid 1px #bbb;
+                margin: 2em 0 1em;
+                font-family: georgia, serif;
+                font-size: 1.2em;
+                font-style: italic;
             }
 
             hr {
-              border-style: solid none none;
+                border-style: solid none none;
             }
 
             p,
             li {
-              padding: 0;
-              margin: .25em 0 .5em;
-              font-size: 1em;
+                padding: 0;
+                margin: .25em 0 .5em;
+                font-size: 1em;
             }
 
             ul,
             ol {
-              padding-left: 0;
+                padding-left: 0;
             }
 
             a {
-              font-weight: bolder;
-              color: #000;
+                color: #000;
             }
 
             a:hover,
             em {
-              color: #f00;
+                color: #f00;
+            }
+
+            .list--inline .list__item {
+                display: inline;
+                margin-left: 0;
+                font-style: normal;
+            }
+
+            .list--inline .list__header {
+                display: list-item;
+                font-weight: 700;
+            }
+
+            .list--inline .list__header:after {
+                content: ":";
             }
 
             .projects {
@@ -171,25 +188,27 @@
         </style>
     </head>
 
-    <body class="bam">
+    <body class="bam" itemscope itemtype="http://schema.org/Person">
         <p>
-            Hello, I’m Fabien!
+            Hello, I’m <span itemprop="name" lang="fr">Fabien Basmaison</span>!
         </p>
 
-        <p>
-            As a <em>Frontend developer</em>, I’ve always pushed for Web Standards, resource optimization and fluid designs. I continue now with Responsive Web Design and like to fiddle with SVG.
-        </p>
+        <div itemprop="description">
+            <p>
+                As a <em itemProp="jobTitle">Frontend developer</em>, I’ve always pushed for Web Standards, resource optimization and fluid designs. I continue now with Responsive Web Design and like to fiddle with SVG.
+            </p>
+            
+            <p>
+                As a <em>former architect</em>, I also have a sense for graphics and structure, and a fair understanding of how people interact with objects.
+            </p>
+            
+            <p>
+                As a <em>traveller</em>, I like the idea of working remotely, be it close to the office, or out in the wild.
+            </p>
+        </div>
 
         <p>
-            As a <em>former architect</em>, I also have a sense for graphics and structure, and a fair understanding of how people interact with objects.
-        </p>
-
-        <p>
-            As a <em>traveller</em>, I like the idea of working remotely, be it close to the office, or out in the wild.
-        </p>
-
-        <p>
-            You can find extensive information about <a href="https://linkedin.com/in/fabienbasmaison">my professional background on LinkedIn</a>, some <a href="https://github.com/arkhi/">code on github</a>, and more <a href="http://arkhi.org/feed/juji">serendipitous gathering of things</a>.
+            You can find extensive information about <a rel="me" itemprop="url" href="https://linkedin.com/in/fabienbasmaison">my professional background on LinkedIn</a>, some <a rel="me" itemprop="url" href="https://github.com/arkhi/">code on github</a>, and more <a href="http://arkhi.org/feed/juji">serendipitous gathering of things</a>.
         </p>
 
         <h2>What I like to do</h2>
@@ -208,6 +227,110 @@
             <li>Curious people who want to challenge requirements.</li>
             <li>People who share and listen.</li>
             <li>People who take their work very seriously and don’t take themselves too seriously.</li>
+        </ul>
+
+        <h2>Skill set</h2>
+
+        <dl class="list--inline">
+            <dt class="list__header">Frontend</dt>
+            <dd class="list__item" itemscope itemtype="http://schema.org/Rating">
+                <abbr title="Hypertext Markup Language" itemprop="name"><a href="https://www.w3.org/html/">HTML</a></abbr>,
+                <meta itemprop="ratingValue" content="5">
+            </dd>
+            <dd class="list__item" itemscope itemtype="http://schema.org/Rating">
+                <abbr title="Cascading Style Sheets" itemprop="name"><a href="https://www.w3.org/css/">CSS</a></abbr>,
+                <meta itemprop="ratingValue" content="5">
+            </dd>
+            <dd class="list__item" itemscope itemtype="http://schema.org/Rating">
+                <span itemprop="name"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></span>,
+                <meta itemprop="ratingValue" content="3">
+            </dd>
+            <dd class="list__item" itemscope itemtype="http://schema.org/Rating">
+                <span itemprop="name"><a href="https://en.wikipedia.org/wiki/Responsive_web_design">Responsive Web Design</a></span>,
+                <meta itemprop="ratingValue" content="4">
+            </dd>
+            <dd class="list__item" itemscope itemtype="http://schema.org/Rating">
+                <span itemprop="name"><a href="http://lesscss.org/">Less</a></span>,
+                <meta itemprop="ratingValue" content="3">
+            </dd>
+            <dd class="list__item" itemscope itemtype="http://schema.org/Rating">
+                <abbr title="Syntactically Awesome Stylesheets" itemprop="name"><a href="http://sass-lang.com/">Sass</a></abbr>,
+                <meta itemprop="ratingValue" content="4">
+            </dd>
+            <dd class="list__item" itemscope itemtype="http://schema.org/Rating">
+                <span itemprop="name"><a href="http://jquery.com/">jQuery</a></span>,
+                <meta itemprop="ratingValue" content="4">
+            </dd>
+            <dd class="list__item" itemscope itemtype="http://schema.org/Rating">
+                <span itemprop="name"><a href="http://getbootstrap.com/">Bootstrap</a></span>,
+                <meta itemprop="ratingValue" content="4">
+            </dd>
+            <dd class="list__item" itemscope itemtype="http://schema.org/Rating">
+                <span itemprop="name"><a href="https://laravel.com/docs/master/blade">Laravel Blade templates</a></span>,
+                <meta itemprop="ratingValue" content="4">
+            </dd>
+            <dd class="list__item" itemscope itemtype="http://schema.org/Rating">
+                <span itemprop="name"><a href="http://twig.sensiolabs.org/">Symfony Twig templates</a></span>,
+                <meta itemprop="ratingValue" content="4">
+            </dd>
+
+            <dt class="list__header">Automation tools</dt>
+            <dd class="list__item" itemscope itemtype="http://schema.org/Rating">
+                <abbr title="Node.js Package Manager" itemprop="name"><a href="http://npmjs.com/">Npm</a></abbr>,
+                <meta itemprop="ratingValue" content="3">
+            </dd>
+            <dd class="list__item" itemscope itemtype="http://schema.org/Rating">
+                <span itemprop="name"><a href="http://gruntjs.com/">Grunt</a></span>,
+                <meta itemprop="ratingValue" content="4">
+            </dd>
+            <dd class="list__item" itemscope itemtype="http://schema.org/Rating">
+                <span itemprop="name"><a href="http://gulpjs.com/">Gulp</a></span>,
+                <meta itemprop="ratingValue" content="3">
+            </dd>
+            <dd class="list__item" itemscope itemtype="http://schema.org/Rating">
+                <span itemprop="name"><a href="http://vagrantup.com/">Vagrant</a></span>,
+                <meta itemprop="ratingValue" content="2">
+            </dd>
+
+            <dt class="list__header">Methodology</dt>
+            <dd class="list__item" itemscope itemtype="http://schema.org/Rating">
+                <span itemprop="name"><a href="https://www.scrum.org/">Scrum</a></span>,
+                <meta itemprop="ratingValue" content="4">
+            </dd>
+            <dd class="list__item" itemscope itemtype="http://schema.org/Rating">
+                <span itemprop="name"><a href="http://www.toyota-global.com/company/vision_philosophy/toyota_production_system/just-in-time.html">Kanban</a></span>,
+                <meta itemprop="ratingValue" content="3">
+            </dd>
+            <dd class="list__item" itemscope itemtype="http://schema.org/Rating">
+                <span itemprop="name"><a href="https://37signals.com/remote">Remote work</a></span>,
+                <meta itemprop="ratingValue" content="5">
+            </dd>
+
+            <dt class="list__header">Collaboration</dt>
+            <dd class="list__item" itemscope itemtype="http://schema.org/Rating">
+                <span itemprop="name"><a href="https://git-scm.com/">git</a></span>,
+                <meta itemprop="ratingValue" content="3">
+            </dd>
+            <dd class="list__item" itemscope itemtype="http://schema.org/Rating">
+                <abbr title="Knyle Style Sheets" itemprop="name"><a href="http://warpspire.com/kss/">KSS</a></abbr>,
+                <meta itemprop="ratingValue" content="4">
+            </dd>
+            <dd class="list__item" itemscope itemtype="http://schema.org/Rating">
+                <span itemprop="name"><a href="http://usejsdoc.org/">JSDoc</a></span>,
+                <meta itemprop="ratingValue" content="4">
+            </dd>
+            <dd class="list__item" itemscope itemtype="http://schema.org/Rating">
+                <span itemprop="name"><a href="http://phpdoc.org/">phpDocumentor</a></span>,
+                <meta itemprop="ratingValue" content="4">
+            </dd>
+        </dl>
+
+        <h2>Languages</h2>
+
+        <ul>
+            <li>French (native language)</li>
+            <li>English (full professional proficiency)</li>
+            <li>Mandarin (elementary proficiency)</li>
         </ul>
 
         <div class="projects">
