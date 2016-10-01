@@ -129,12 +129,16 @@
             }
 
             @media screen and (min-width: 1200px) {
+                .projects .projects__project {
+                    border-top: solid .5em #311;
+                }
+
                 .projects .projects__project + .projects__project {
                     margin-top: 0;
                 }
 
-                .projects__project:first-of-type {
-                    margin-top: 1.5em;
+                .projects__project:last-of-type {
+                    border-bottom: solid .5em #311;
                 }
             }
 
@@ -172,7 +176,7 @@
                     width: 65%;
                     min-height: 600px;
                     min-height: 100vh;
-                    border-right: dotted 1px #bbb;
+                    border-right: solid .5em #311;
                     margin-top: 0;
                     margin-right: 1.5em;
                     background-position: 0 0;
