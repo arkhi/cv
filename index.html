@@ -19,7 +19,7 @@
                 margin: 2vw 0;
                 line-height: 1.5;
                 font-family: helvetica, sans-serif;
-                color: #311;
+                color: #322;
                 background: #fffdfd;
                 overflow: visible;
             }
@@ -34,8 +34,8 @@
                 max-width: 680px;
                 padding-right: 20px;
                 padding-left: 20px;
-                margin: 0 auto;
-                margin: 0 auto;
+                margin-right: auto;
+                margin-left: auto;
             }
 
             @media screen and (min-width: 1200px) {
@@ -129,16 +129,8 @@
             }
 
             @media screen and (min-width: 1200px) {
-                .projects .projects__project {
-                    border-top: solid .5em #311;
-                }
-
                 .projects .projects__project + .projects__project {
-                    margin-top: 0;
-                }
-
-                .projects__project:last-of-type {
-                    border-bottom: solid .5em #311;
+                    margin-top: 1em;
                 }
             }
 
@@ -173,13 +165,27 @@
             @media screen and (min-width: 1200px) {
                 .project__illustration {
                     float: left;
+                    position: relative;
                     width: 65%;
-                    min-height: 600px;
-                    min-height: 100vh;
-                    border-right: solid .5em #311;
+                    height: 600px;
+                    height: 100vh;
                     margin-top: 0;
                     margin-right: 1.5em;
                     background-position: 0 0;
+                    background-color: #fff;
+                    background-size: contain;
+                }
+
+                .project__illustration::after {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background-attachment: fixed;
+                    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAE0lEQVQYlWNgIBE0EEmPmkihiQDYkgyBuT4H/wAAAABJRU5ErkJggg==");
+                    content: "";
                 }
             }
 
@@ -420,7 +426,7 @@
                     <meta itemprop="ratingValue" content="4">
                 </dd>
                 <dd class="list__item" itemscope itemtype="http://schema.org/Rating">
-                    <span itemprop="name"><a href="http://twig.sensiolabs.org/">Symfony Twig templates</a></span>,
+                    <span itemprop="name"><a href="http://twig.sensiolabs.org/">Symfony Twig templates</a></span>
                     <meta itemprop="ratingValue" content="4">
                 </dd>
 
@@ -438,7 +444,7 @@
                     <meta itemprop="ratingValue" content="3">
                 </dd>
                 <dd class="list__item" itemscope itemtype="http://schema.org/Rating">
-                    <span itemprop="name"><a href="http://vagrantup.com/">Vagrant</a></span>,
+                    <span itemprop="name"><a href="http://vagrantup.com/">Vagrant</a></span>
                     <meta itemprop="ratingValue" content="2">
                 </dd>
 
@@ -452,7 +458,7 @@
                     <meta itemprop="ratingValue" content="3">
                 </dd>
                 <dd class="list__item" itemscope itemtype="http://schema.org/Rating">
-                    <span itemprop="name"><a href="https://37signals.com/remote">Remote work</a></span>,
+                    <span itemprop="name"><a href="https://37signals.com/remote">Remote work</a></span>
                     <meta itemprop="ratingValue" content="5">
                 </dd>
 
@@ -470,7 +476,7 @@
                     <meta itemprop="ratingValue" content="4">
                 </dd>
                 <dd class="list__item" itemscope itemtype="http://schema.org/Rating">
-                    <span itemprop="name"><a href="http://phpdoc.org/">phpDocumentor</a></span>,
+                    <span itemprop="name"><a href="http://phpdoc.org/">phpDocumentor</a></span>
                     <meta itemprop="ratingValue" content="4">
                 </dd>
             </dl>
