@@ -13,6 +13,10 @@
             /* Main layout
             ----------------------------------------------------------------------------- */
 
+            html {
+                scroll-behavior: smooth;
+            }
+
             body {
                 padding: 0;
                 margin: 5em 0;
@@ -94,7 +98,22 @@
 
             a:hover,
             em {
-                color: #f00;
+                color: #b40000;
+            }
+
+            /* Accessibility
+            ----------------------------------------------------------------------------- */
+
+            .sr-only {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                border: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect( 0, 0, 0, 0 );
+                white-space: nowrap;
             }
 
             /* Lists
@@ -346,538 +365,541 @@
             .c-minimap__h3 {
                 background-color: #999;
             }
-
         </style>
     </head>
 
     <body class="bam" itemscope itemtype="http://schema.org/Person">
-        <section class="container">
-            <p>
-                Hello, I’m <span itemprop="name" lang="fr">Fabien Basmaison</span>!
-            </p>
-
-            <div itemprop="description">
-                <p>
-                    As a <em itemProp="jobTitle">Frontend developer</em>, I’ve always pushed for Web Standards, resource optimization and fluid designs. I continue now with Responsive Web Design and like to fiddle with SVG.
-                </p>
+        <main role="main">
+            <section class="container">
+                <h1 class="sr-only">Fabien Basmaison; Résumé</h1>
 
                 <p>
-                    As a <em>former architect</em>, I also have a sense for graphics and structure, and a fair understanding of how people interact with objects.
+                    Hello, I’m <span itemprop="name" lang="fr">Fabien Basmaison</span>!
                 </p>
+
+                <div itemprop="description">
+                    <p>
+                        As a <em itemProp="jobTitle">Frontend developer</em>, I’ve always pushed for Web Standards, resource optimization and fluid designs. I continue now with Responsive Web Design and like to fiddle with SVG.
+                    </p>
+
+                    <p>
+                        As a <em>former architect</em>, I also have a sense for graphics and structure, and a fair understanding of how people interact with objects.
+                    </p>
+
+                    <p>
+                        As a <em>traveller</em>, I like the idea of working remotely, be it close to the office, or out in the wild.
+                    </p>
+                </div>
 
                 <p>
-                    As a <em>traveller</em>, I like the idea of working remotely, be it close to the office, or out in the wild.
+                    You can find extensive information about <a rel="me" itemprop="url" href="https://linkedin.com/in/fabienbasmaison">my professional background</a> on LinkedIn or other <a rel="me" itemprop="url" href="https://arkhi.org/#networks-professional">services I use</a> along with a more <a href="http://arkhi.org/feed/juji">serendipitous gathering of things</a>. You can also <a href="./cv-fabien-basmaison-en.pdf">download this PDF Resume</a>.
                 </p>
-            </div>
+            </section>
 
-            <p>
-                You can find extensive information about <a rel="me" itemprop="url" href="https://linkedin.com/in/fabienbasmaison">my professional background</a> on LinkedIn or other <a rel="me" itemprop="url" href="https://arkhi.org/#networks-professional">services I use</a> along with a more <a href="http://arkhi.org/feed/juji">serendipitous gathering of things</a>. You can also <a href="./cv-fabien-basmaison-en.pdf">download this PDF Resume</a>.
-            </p>
-        </section>
+            <section class="container">
+                <h2>What I like to do</h2>
 
-        <section class="container">
-            <h2>What I like to do</h2>
+                <ul>
+                    <li>Learn and find solutions to problems.</li>
+                    <li>Iterate well planned small changes on big projects.</li>
+                    <li>Work on several little projects for different clients.</li>
+                    <li>Use semantic code and microdata.</li>
+                    <li>Improve workflows with people and tools (linters or automated tests).</li>
+                </ul>
+            </section>
 
-            <ul>
-                <li>Learn and find solutions to problems.</li>
-                <li>Iterate well planned small changes on big projects.</li>
-                <li>Work on several little projects for different clients.</li>
-                <li>Use semantic code and microdata.</li>
-                <li>Improve workflows with people and tools (linters or automated tests).</li>
-            </ul>
-        </section>
+            <section class="container">
+                <h2>Who I like to work with</h2>
 
-        <section class="container">
-            <h2>Who I like to work with</h2>
+                <ul>
+                    <li>Curious people who want to challenge requirements.</li>
+                    <li>People who share and listen.</li>
+                    <li>People who take their work very seriously and don’t take themselves too seriously.</li>
+                </ul>
+            </section>
 
-            <ul>
-                <li>Curious people who want to challenge requirements.</li>
-                <li>People who share and listen.</li>
-                <li>People who take their work very seriously and don’t take themselves too seriously.</li>
-            </ul>
-        </section>
+            <section class="container">
+                <h2>Skill set</h2>
 
-        <section class="container">
-            <h2>Skill set</h2>
+                <dl class="list--inline">
+                    <dt class="list__header">Frontend</dt>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <abbr title="Hypertext Markup Language" itemprop="name"><a href="https://www.w3.org/html/">HTML</a></abbr>,
+                        <meta itemprop="ratingValue" content="5">
+                    </dd>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <abbr title="Cascading Style Sheets" itemprop="name"><a href="https://www.w3.org/css/">CSS</a></abbr>,
+                        <meta itemprop="ratingValue" content="5">
+                    </dd>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <span itemprop="name"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></span>,
+                        <meta itemprop="ratingValue" content="3">
+                    </dd>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <span itemprop="name"><a href="https://en.wikipedia.org/wiki/Responsive_web_design">Responsive Web Design</a></span>,
+                        <meta itemprop="ratingValue" content="4">
+                    </dd>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <span itemprop="name"><a href="http://lesscss.org/">Less</a></span>,
+                        <meta itemprop="ratingValue" content="3">
+                    </dd>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <abbr title="Syntactically Awesome Stylesheets" itemprop="name"><a href="http://sass-lang.com/">Sass</a></abbr>,
+                        <meta itemprop="ratingValue" content="4">
+                    </dd>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <span itemprop="name"><a href="http://jquery.com/">jQuery</a></span>,
+                        <meta itemprop="ratingValue" content="4">
+                    </dd>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <span itemprop="name"><a href="http://getbootstrap.com/">Bootstrap</a></span>,
+                        <meta itemprop="ratingValue" content="4">
+                    </dd>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <span itemprop="name"><a href="https://laravel.com/docs/master/blade">Laravel Blade templates</a></span>,
+                        <meta itemprop="ratingValue" content="4">
+                    </dd>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <span itemprop="name"><a href="http://twig.sensiolabs.org/">Symfony Twig templates</a></span>…
+                        <meta itemprop="ratingValue" content="4">
+                    </dd>
 
-            <dl class="list--inline">
-                <dt class="list__header">Frontend</dt>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <abbr title="Hypertext Markup Language" itemprop="name"><a href="https://www.w3.org/html/">HTML</a></abbr>,
-                    <meta itemprop="ratingValue" content="5">
-                </dd>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <abbr title="Cascading Style Sheets" itemprop="name"><a href="https://www.w3.org/css/">CSS</a></abbr>,
-                    <meta itemprop="ratingValue" content="5">
-                </dd>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <span itemprop="name"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></span>,
-                    <meta itemprop="ratingValue" content="3">
-                </dd>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <span itemprop="name"><a href="https://en.wikipedia.org/wiki/Responsive_web_design">Responsive Web Design</a></span>,
-                    <meta itemprop="ratingValue" content="4">
-                </dd>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <span itemprop="name"><a href="http://lesscss.org/">Less</a></span>,
-                    <meta itemprop="ratingValue" content="3">
-                </dd>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <abbr title="Syntactically Awesome Stylesheets" itemprop="name"><a href="http://sass-lang.com/">Sass</a></abbr>,
-                    <meta itemprop="ratingValue" content="4">
-                </dd>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <span itemprop="name"><a href="http://jquery.com/">jQuery</a></span>,
-                    <meta itemprop="ratingValue" content="4">
-                </dd>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <span itemprop="name"><a href="http://getbootstrap.com/">Bootstrap</a></span>,
-                    <meta itemprop="ratingValue" content="4">
-                </dd>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <span itemprop="name"><a href="https://laravel.com/docs/master/blade">Laravel Blade templates</a></span>,
-                    <meta itemprop="ratingValue" content="4">
-                </dd>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <span itemprop="name"><a href="http://twig.sensiolabs.org/">Symfony Twig templates</a></span>…
-                    <meta itemprop="ratingValue" content="4">
-                </dd>
+                    <dt class="list__header">Methodology &amp; Collaboration</dt>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <span itemprop="name"><a href="https://www.scrum.org/">Scrum</a></span>,
+                        <meta itemprop="ratingValue" content="4">
+                    </dd>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <span itemprop="name"><a href="https://global.toyota/en/company/vision-and-philosophy/production-system/">Kanban</a></span>,
+                        <meta itemprop="ratingValue" content="3">
+                    </dd>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <span itemprop="name"><a href="https://37signals.com/remote">remote work</a></span>,
+                        <meta itemprop="ratingValue" content="5">
+                    </dd>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <span itemprop="name"><a href="https://git-scm.com/">Git</a></span>…
+                        <meta itemprop="ratingValue" content="3">
+                    </dd>
 
-                <dt class="list__header">Methodology &amp; Collaboration</dt>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <span itemprop="name"><a href="https://www.scrum.org/">Scrum</a></span>,
-                    <meta itemprop="ratingValue" content="4">
-                </dd>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <span itemprop="name"><a href="https://global.toyota/en/company/vision-and-philosophy/production-system/">Kanban</a></span>,
-                    <meta itemprop="ratingValue" content="3">
-                </dd>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <span itemprop="name"><a href="https://37signals.com/remote">remote work</a></span>,
-                    <meta itemprop="ratingValue" content="5">
-                </dd>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <span itemprop="name"><a href="https://git-scm.com/">Git</a></span>…
-                    <meta itemprop="ratingValue" content="3">
-                </dd>
+                    <dt class="list__header">Quality Assurance</dt>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <span itemprop="name"><a href="https://eslint.org/">ESLint</a></span>,
+                        <meta itemprop="ratingValue" content="4">
+                    </dd>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <span itemprop="name"><a href="https://stylelint.io/">stylelint</a></span>,
+                        <meta itemprop="ratingValue" content="4">
+                    </dd>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <span itemprop="name"><a href="https://www.typescriptlang.org/">TypeScript</a></span>,
+                        <meta itemprop="ratingValue" content="3">
+                    </dd>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <span itemprop="name"><a href="https://codeception.com/">Codeception</a></span>,
+                        <meta itemprop="ratingValue" content="2">
+                    </dd>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <span itemprop="name"><a href="https://travis-ci.com/">Travis‑CI</a></span>,
+                        <meta itemprop="ratingValue" content="3">
+                    </dd>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <span itemprop="name"><a href="https://bitbucket.org/product/features/pipelines">Bitbucket Pipelines</a></span>…
+                        <meta itemprop="ratingValue" content="2">
+                    </dd>
 
-                <dt class="list__header">Quality Assurance</dt>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <span itemprop="name"><a href="https://eslint.org/">ESLint</a></span>,
-                    <meta itemprop="ratingValue" content="4">
-                </dd>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <span itemprop="name"><a href="https://stylelint.io/">stylelint</a></span>,
-                    <meta itemprop="ratingValue" content="4">
-                </dd>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <span itemprop="name"><a href="https://www.typescriptlang.org/">TypeScript</a></span>,
-                    <meta itemprop="ratingValue" content="3">
-                </dd>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <span itemprop="name"><a href="https://codeception.com/">Codeception</a></span>,
-                    <meta itemprop="ratingValue" content="2">
-                </dd>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <span itemprop="name"><a href="https://travis-ci.com/">Travis‑CI</a></span>,
-                    <meta itemprop="ratingValue" content="3">
-                </dd>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <span itemprop="name"><a href="https://bitbucket.org/product/features/pipelines">Bitbucket Pipelines</a></span>…
-                    <meta itemprop="ratingValue" content="2">
-                </dd>
+                    <dt class="list__header">Automation tools</dt>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <abbr title="Node.js Package Manager" itemprop="name"><a href="https://npmjs.com/">npm</a></abbr>,
+                        <meta itemprop="ratingValue" content="3">
+                    </dd>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <abbr itemprop="name"><a href="https://yarnpkg.com/">yarn</a></abbr>,
+                        <meta itemprop="ratingValue" content="3">
+                    </dd>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <span itemprop="name"><a href="https://gruntjs.com/">Grunt</a></span>,
+                        <meta itemprop="ratingValue" content="3">
+                    </dd>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <span itemprop="name"><a href="https://gulpjs.com/">gulp</a></span>,
+                        <meta itemprop="ratingValue" content="2">
+                    </dd>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <span itemprop="name"><a href="https://vagrantup.com/">Vagrant</a></span>,
+                        <meta itemprop="ratingValue" content="2">
+                    </dd>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <abbr title="Knyle Style Sheets" itemprop="name"><a href="http://warpspire.com/kss/"><abbr title="Knyle Style Sheets">KSS</abbr></a></abbr>,
+                        <meta itemprop="ratingValue" content="4">
+                    </dd>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <span itemprop="name"><a href="https://jsdoc.app/">JSDoc</a></span>,
+                        <meta itemprop="ratingValue" content="4">
+                    </dd>
+                    <dd
+                        class="list__item"
+                        itemprop="knowsAbout"
+                        itemscope itemtype="http://schema.org/Rating"
+                    >
+                        <span itemprop="name"><a href="https://phpdoc.org">phpDocumentor</a></span>…
+                        <meta itemprop="ratingValue" content="4">
+                    </dd>
+                </dl>
+            </section>
 
-                <dt class="list__header">Automation tools</dt>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <abbr title="Node.js Package Manager" itemprop="name"><a href="https://npmjs.com/">npm</a></abbr>,
-                    <meta itemprop="ratingValue" content="3">
-                </dd>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <abbr itemprop="name"><a href="https://yarnpkg.com/">yarn</a></abbr>,
-                    <meta itemprop="ratingValue" content="3">
-                </dd>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <span itemprop="name"><a href="https://gruntjs.com/">Grunt</a></span>,
-                    <meta itemprop="ratingValue" content="3">
-                </dd>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <span itemprop="name"><a href="https://gulpjs.com/">gulp</a></span>,
-                    <meta itemprop="ratingValue" content="2">
-                </dd>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <span itemprop="name"><a href="https://vagrantup.com/">Vagrant</a></span>,
-                    <meta itemprop="ratingValue" content="2">
-                </dd>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <abbr title="Knyle Style Sheets" itemprop="name"><a href="http://warpspire.com/kss/"><abbr title="Knyle Style Sheets">KSS</abbr></a></abbr>,
-                    <meta itemprop="ratingValue" content="4">
-                </dd>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <span itemprop="name"><a href="https://jsdoc.app/">JSDoc</a></span>,
-                    <meta itemprop="ratingValue" content="4">
-                </dd>
-                <dd
-                    class="list__item"
-                    itemprop="knowsAbout"
-                    itemscope itemtype="http://schema.org/Rating"
-                >
-                    <span itemprop="name"><a href="https://phpdoc.org">phpDocumentor</a></span>…
-                    <meta itemprop="ratingValue" content="4">
-                </dd>
-            </dl>
-        </section>
+            <section class="container">
+                <h2>Languages</h2>
 
-        <section class="container">
-            <h2>Languages</h2>
+                <ul>
+                    <li
+                        itemprop="knowsLanguage"
+                        itemscope itemtype="http://schema.org/Language"
+                    >
+                        <span itemprop="name">French</span> (native language)
+                    </li>
+                    <li
+                        itemprop="knowsLanguage"
+                        itemscope itemtype="http://schema.org/Language"
+                    >
+                        <span itemprop="name">English</span> (full professional proficiency)
+                    </li>
+                    <li
+                        itemprop="knowsLanguage"
+                        itemscope itemtype="http://schema.org/Language"
+                    >
+                        <span itemprop="name">Mandarin</span> (elementary proficiency)
+                    </li>
+                    <li
+                        itemprop="knowsLanguage"
+                        itemscope itemtype="http://schema.org/Language"
+                    >
+                        <span itemprop="name">Spanish</span> (elementary proficiency)
+                    </li>
+                </ul>
+            </section>
 
-            <ul>
-                <li
-                    itemprop="knowsLanguage"
-                    itemscope itemtype="http://schema.org/Language"
-                >
-                    <span itemprop="name">French</span> (native language)
-                </li>
-                <li
-                    itemprop="knowsLanguage"
-                    itemscope itemtype="http://schema.org/Language"
-                >
-                    <span itemprop="name">English</span> (full professional proficiency)
-                </li>
-                <li
-                    itemprop="knowsLanguage"
-                    itemscope itemtype="http://schema.org/Language"
-                >
-                    <span itemprop="name">Mandarin</span> (elementary proficiency)
-                </li>
-                <li
-                    itemprop="knowsLanguage"
-                    itemscope itemtype="http://schema.org/Language"
-                >
-                    <span itemprop="name">Spanish</span> (elementary proficiency)
-                </li>
-            </ul>
-        </section>
+            <section class="projects">
+                <h2 class="container">Selected works</h2>
 
-        <section class="projects">
-            <h2 class="container">Selected works</h2>
+                <div class="container projects__project">
+                    <h3 class="project__title" id="zenith-etn.com">zenith-etn.com</h3>
 
-            <div class="container projects__project">
-                <h3 class="project__title" id="zenith-etn.com">zenith-etn.com</h3>
+                    <a class="project__illustration illustration--zenith" href="https://www.zenith-etn.com/" aria-label="Link to zenith-etn.com">
+                        <img class="project__thumbnail" src="img/thumbnails/zenith-etn.com.png" width="960" height="240" alt="">
+                    </a>
 
-                <a class="project__illustration illustration--zenith" href="https://www.zenith-etn.com/">
-                    <img class="project__thumbnail" src="img/thumbnails/zenith-etn.com.png" width="960" height="240" alt="">
-                </a>
-
-                <div class="project__description">
-                    <p>
-                        <strong>2019</strong>: The aim of <a href="https://www.zenith-etn.com/"><abbr title="ZEbrafish Neuroscience International Training Hub">Zenith</abbr></a> is to train a new generation of neuroscientists in cutting-edge approaches that bridge biology, physics, and mathematics to uncover the mysteries of brain formation and function.
-                    </p>
-                    <p>
-                        This is a collaboration with <abbr>Zenith</abbr> for the content and directions, and <a href="https://headquarter.paris/">Headquarter</a> for graphic design.
-                    </p>
+                    <div class="project__description">
+                        <p>
+                            <strong>2019</strong>: The aim of <a href="https://www.zenith-etn.com/"><abbr title="ZEbrafish Neuroscience International Training Hub">Zenith</abbr></a> is to train a new generation of neuroscientists in cutting-edge approaches that bridge biology, physics, and mathematics to uncover the mysteries of brain formation and function.
+                        </p>
+                        <p>
+                            This is a collaboration with <abbr>Zenith</abbr> for the content and directions, and <a href="https://headquarter.paris/">Headquarter</a> for graphic design.
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="container projects__project">
-                <h3 class="project__title" id="elson.fr">elson.fr</h3>
+                <div class="container projects__project">
+                    <h3 class="project__title" id="elson.fr">elson.fr</h3>
 
-                <a class="project__illustration illustration--elson" href="https://www.elson.fr/">
-                    <img class="project__thumbnail" src="img/thumbnails/elson.fr.jpg" width="960" height="240" alt="">
-                </a>
+                    <a class="project__illustration illustration--elson" href="https://www.elson.fr/" aria-label="Link to elson.fr">
+                        <img class="project__thumbnail" src="img/thumbnails/elson.fr.jpg" width="960" height="240" alt="">
+                    </a>
 
-                <div class="project__description">
-                    <p>
-                        <strong>2018</strong>: <a href="https://www.elson.fr/">elson</a>’s goal is to assist podcast users to find what they will like while supporting the producers of podcasts.
-                    </p>
+                    <div class="project__description">
+                        <p>
+                            <strong>2018</strong>: <a href="https://www.elson.fr/">elson</a>’s goal is to assist podcast users to find what they will like while supporting the producers of podcasts.
+                        </p>
 
-                    <p>
-                        I made <a href="https://archives.arkhi.org/projects/elson.fr/prototypes/home-loggedin/">those prototypes</a>, updated on a daily basis while mockups were provided. This implies permanent refactoring, and a lot of flexibility. The prototypes were later integrated into a React‑based application.
-                    </p>
+                        <p>
+                            I made <a href="https://archives.arkhi.org/projects/elson.fr/prototypes/home-loggedin/">those prototypes</a>, updated on a daily basis while mockups were provided. This implies permanent refactoring, and a lot of flexibility. The prototypes were later integrated into a React‑based application.
+                        </p>
 
-                    <p>
-                        Being playful at times, I <a href="https://archives.arkhi.org/projects/elson.fr/prototypes/symbole-elson-animated.html">animated the logo</a> a bit, to maybe use it as a loader.
-                    </p>
+                        <p>
+                            Being playful at times, I <a href="https://archives.arkhi.org/projects/elson.fr/prototypes/symbole-elson-animated.html">animated the logo</a> a bit, to maybe use it as a loader.
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="container projects__project">
-                <h3 class="project__title" id="wyartlab.org">wyartlab.org</h3>
+                <div class="container projects__project">
+                    <h3 class="project__title" id="wyartlab.org">wyartlab.org</h3>
 
-                <a class="project__illustration illustration--wyartlab" href="https://wyartlab.org/">
-                    <img class="project__thumbnail" src="img/thumbnails/wyartlab.org.png" width="960" height="240" alt="">
-                </a>
+                    <a class="project__illustration illustration--wyartlab" href="https://wyartlab.org/" aria-label="Link to wyartlab.org">
+                        <img class="project__thumbnail" src="img/thumbnails/wyartlab.org.png" width="960" height="240" alt="">
+                    </a>
 
-                <div class="project__description">
-                    <p>
-                        <strong>2017</strong>: <a href="https://wyartlab.org/">wyartlab.org</a> is a collaboration with <a href="http://cargocollective.com/flagship">Flasghsip</a> in Shanghai for the graphic design. The research lab shows its members and (cool) researches.
-                    </p>
+                    <div class="project__description">
+                        <p>
+                            <strong>2017</strong>: <a href="https://wyartlab.org/">wyartlab.org</a> is a collaboration with <a href="http://cargocollective.com/flagship">Flasghsip</a> in Shanghai for the graphic design. The research lab shows its members and (cool) researches.
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="container projects__project">
-                <h3 class="project__title" id="juwai.com">juwai.com</h3>
+                <div class="container projects__project">
+                    <h3 class="project__title" id="juwai.com">juwai.com</h3>
 
-                <a class="project__illustration illustration--juwai" href="http://juwai.com/">
-                    <img class="project__thumbnail" src="img/thumbnails/juwai.com.jpg" width="960" height="240" alt="">
-                </a>
+                    <a class="project__illustration illustration--juwai" href="http://juwai.com/" aria-label="Link to juwai.com">
+                        <img class="project__thumbnail" src="img/thumbnails/juwai.com.jpg" width="960" height="240" alt="">
+                    </a>
 
-                <div class="project__description">
-                    <p>
-                        <strong>2015~2016</strong>: <a href="http://juwai.com/">http://juwai.com/</a> is the main website of a few, dedicated to Chinese consumers and customers throughout the World.
-                    </p>
-                    <p>
-                        I worked on almost every frontend related project, from the <em>administrative side of applications</em>, to a <em>global redesign of <a href="http://www.juwai.com">www.juwai.com</a></em> that started in December 2015.
-                    </p>
-                    <p>
-                        One focus of mine has been improving code quality, reduce bugs and time spent to fix them, either through documentation, collaboration with people on all sides of the spectrum or pushing for following code conventions through the use of Travis‑CI, automated tests and linters.
-                    </p>
+                    <div class="project__description">
+                        <p>
+                            <strong>2015~2016</strong>: <a href="http://juwai.com/">http://juwai.com/</a> is the main website of a few, dedicated to Chinese consumers and customers throughout the World.
+                        </p>
+                        <p>
+                            I worked on almost every frontend related project, from the <em>administrative side of applications</em>, to a <em>global redesign of <a href="http://www.juwai.com">www.juwai.com</a></em> that started in December 2015.
+                        </p>
+                        <p>
+                            One focus of mine has been improving code quality, reduce bugs and time spent to fix them, either through documentation, collaboration with people on all sides of the spectrum or pushing for following code conventions through the use of Travis‑CI, automated tests and linters.
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="container projects__project">
-                <h3 class="project__title" id="kaufmich.com">kaufmich.com</h3>
+                <div class="container projects__project">
+                    <h3 class="project__title" id="kaufmich.com">kaufmich.com</h3>
 
-                <a class="project__illustration illustration--kaufmich" href="http://kaufmich.com/">
-                    <img class="project__thumbnail" src="img/thumbnails/kaufmich.com.jpg" width="960" height="240" alt="">
-                </a>
+                    <a class="project__illustration illustration--kaufmich" href="http://kaufmich.com/" aria-label="Link to kaufmich.com">
+                        <img class="project__thumbnail" src="img/thumbnails/kaufmich.com.jpg" width="960" height="240" alt="">
+                    </a>
 
-                <div class="project__description">
-                    <p>
-                        <strong>2012~2014</strong>: (<abbr>NSFW</abbr>) On <a href="http://kaufmich.com/">http://kaufmich.com/</a>, my biggest challenge was to clean legacy code while adding more features to the website. Considering the amount of people and code added through the years, it was <i>quite some fun</i>!
-                    </p>
+                    <div class="project__description">
+                        <p>
+                            <strong>2012~2014</strong>: (<abbr>NSFW</abbr>) On <a href="http://kaufmich.com/">http://kaufmich.com/</a>, my biggest challenge was to clean legacy code while adding more features to the website. Considering the amount of people and code added through the years, it was <i>quite some fun</i>!
+                        </p>
 
-                    <p>
-                        Using grunt, sass and a PHP version of <a href="http://warpspire.com/kss/"><abbr title="Knyle Style Sheets">KSS</abbr></a>, I started the HTML &amp; CSS integration of a <a href="http://www.kaufmich.com/m/user/register">mobile first version</a> based on <abbr title="Responsive Web Design">RWD</abbr> before I left in September. This was the first stone of multiple goals:
-                    </p>
+                        <p>
+                            Using grunt, sass and a PHP version of <a href="http://warpspire.com/kss/"><abbr title="Knyle Style Sheets">KSS</abbr></a>, I started the HTML &amp; CSS integration of a <a href="http://www.kaufmich.com/m/user/register">mobile first version</a> based on <abbr title="Responsive Web Design">RWD</abbr> before I left in September. This was the first stone of multiple goals:
+                        </p>
 
-                    <ul>
-                        <li>
-                            To revamp the whole website by gradually moving the desktop features to a <abbr>RWD</abbr> version presented as the mobile version, then switching the desktop to the <abbr>RWD</abbr> website.
-                        </li>
-                        <li>
-                            To improve collaboration between graphic designer, marketing, support and development teams by providing live style‑guides for reference.
-                        </li>
-                    </ul>
+                        <ul>
+                            <li>
+                                To revamp the whole website by gradually moving the desktop features to a <abbr>RWD</abbr> version presented as the mobile version, then switching the desktop to the <abbr>RWD</abbr> website.
+                            </li>
+                            <li>
+                                To improve collaboration between graphic designer, marketing, support and development teams by providing live style‑guides for reference.
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-            <div class="container projects__project">
-                <h3 class="project__title" id="poppen.de">poppen.de</h3>
+                <div class="container projects__project">
+                    <h3 class="project__title" id="poppen.de">poppen.de</h3>
 
-                <a class="project__illustration illustration--poppen" href="http://poppen.de/">
-                    <img class="project__thumbnail" src="img/thumbnails/poppen.de.jpg" width="960" height="240" alt="">
-                </a>
+                    <a class="project__illustration illustration--poppen" href="http://poppen.de/" aria-label="Link to poppen.de">
+                        <img class="project__thumbnail" src="img/thumbnails/poppen.de.jpg" width="960" height="240" alt="">
+                    </a>
 
-                <div class="project__description">
-                    <p>
-                        <strong>2010 ~&nbsp;2012</strong>: (<abbr title="Not Safe For Work">NSFW</abbr>) <a href="http://poppen.de/">http://poppen.de/</a> is part of what my previous company is doing. There’s more than 3 millions registered users which makes it a very interesting challenge as any change made has a real impact.
-                    </p>
+                    <div class="project__description">
+                        <p>
+                            <strong>2010 ~&nbsp;2012</strong>: (<abbr title="Not Safe For Work">NSFW</abbr>) <a href="http://poppen.de/">http://poppen.de/</a> is part of what my previous company is doing. There’s more than 3 millions registered users which makes it a very interesting challenge as any change made has a real impact.
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="container projects__project">
-                <h3 class="project__title" id="skyview.asia">skyview.asia</h3>
+                <div class="container projects__project">
+                    <h3 class="project__title" id="skyview.asia">skyview.asia</h3>
 
-                <a class="project__illustration illustration--skyview" href="http://archives.arkhi.org/projects/sky-view/sample.html">
-                    <img class="project__thumbnail" src="img/thumbnails/skyview.asia.jpg" width="960" height="240" alt="">
-                </a>
+                    <a class="project__illustration illustration--skyview" href="http://archives.arkhi.org/projects/sky-view/sample.html" aria-label="Link to skyview.asia">
+                        <img class="project__thumbnail" src="img/thumbnails/skyview.asia.jpg" width="960" height="240" alt="">
+                    </a>
 
-                <div class="project__description">
-                    <p>
-                        <strong>2011</strong>: <a href="http://archives.arkhi.org/projects/sky-view/sample.html">Skyview</a> was a command from a friend. The concept was <i>simplicity</i> and <i>fullscreen</i>.
-                    </p>
+                    <div class="project__description">
+                        <p>
+                            <strong>2011</strong>: <a href="http://archives.arkhi.org/projects/sky-view/sample.html">Skyview</a> was a command from a friend. The concept was <i>simplicity</i> and <i>fullscreen</i>.
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="container projects__project">
-                <h3 class="project__title" id="china-europa-forum.net">china-europa-forum.net</h3>
+                <div class="container projects__project">
+                    <h3 class="project__title" id="china-europa-forum.net">china-europa-forum.net</h3>
 
-                <a class="project__illustration illustration--china-europa-forum" href="http://china-europa-forum.net/">
-                    <img class="project__thumbnail" src="img/thumbnails/china-europa-forum.net.jpg" width="960" height="240" alt="">
-                </a>
+                    <a class="project__illustration illustration--china-europa-forum" href="http://china-europa-forum.net/" aria-label="Link to china-europa-forum.net">
+                        <img class="project__thumbnail" src="img/thumbnails/china-europa-forum.net.jpg" width="960" height="240" alt="">
+                    </a>
 
-                <div class="project__description">
-                    <p>
-                        <strong>2010</strong>: <a href="http://china-europa-forum.net/">http://china-europa-forum.net/</a> is an initiative to push for exchange and support between Europe and China, on a lot of different topics. I coded the frontend and CMS of the site at the time; the actual version saw some HTML content added by a third part which can break the layout.
-                    </p>
+                    <div class="project__description">
+                        <p>
+                            <strong>2010</strong>: <a href="http://china-europa-forum.net/">http://china-europa-forum.net/</a> is an initiative to push for exchange and support between Europe and China, on a lot of different topics. I coded the frontend and CMS of the site at the time; the actual version saw some HTML content added by a third part which can break the layout.
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="container projects__project">
-                <h3 class="project__title" id="flipmood.com">flipmood.com</h3>
+                <div class="container projects__project">
+                    <h3 class="project__title" id="flipmood.com">flipmood.com</h3>
 
-                <a class="project__illustration illustration--flipmood" href="http://archives.arkhi.org/projects/flipmood.com/">
-                    <img class="project__thumbnail" src="img/thumbnails/flipmood.com.jpg" width="960" height="240" alt="">
-                </a>
+                    <a class="project__illustration illustration--flipmood" href="http://archives.arkhi.org/projects/flipmood.com/" aria-label="Link to flipmood.com">
+                        <img class="project__thumbnail" src="img/thumbnails/flipmood.com.jpg" width="960" height="240" alt="">
+                    </a>
 
-                <div class="project__description">
-                    <p>
-                        <strong>2010</strong>: <a href="http://archives.arkhi.org/projects/flipmood.com/">Flipmood</a> was a website for friends that wanted to promote their creative works. Working with these two was amazingly insightful about what can be expected from good graphic designers.
-                    </p>
+                    <div class="project__description">
+                        <p>
+                            <strong>2010</strong>: <a href="http://archives.arkhi.org/projects/flipmood.com/">Flipmood</a> was a website for friends that wanted to promote their creative works. Working with these two was amazingly insightful about what can be expected from good graphic designers.
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="container projects__project">
-                <h3 class="project__title" id="bodybag.me">bodybag.me</h3>
+                <div class="container projects__project">
+                    <h3 class="project__title" id="bodybag.me">bodybag.me</h3>
 
-                <a class="project__illustration illustration--bodybag" href="https://archives.arkhi.org/projects/bodybag.me/">
-                    <img class="project__thumbnail" src="img/thumbnails/bodybag.me.jpg" width="960" height="240" alt="">
-                </a>
+                    <a class="project__illustration illustration--bodybag" href="https://archives.arkhi.org/projects/bodybag.me/" aria-label="Link to bodybag.me">
+                        <img class="project__thumbnail" src="img/thumbnails/bodybag.me.jpg" width="960" height="240" alt="">
+                    </a>
 
-                <div class="project__description">
-                    <p>
-                        <strong>2009</strong>: <a href="https://archives.arkhi.org/projects/bodybag.me/">Bodybag</a> was a website for two Dutch architects in Shanghai who started their fashion design company.
-                    </p>
+                    <div class="project__description">
+                        <p>
+                            <strong>2009</strong>: <a href="https://archives.arkhi.org/projects/bodybag.me/">Bodybag</a> was a website for two Dutch architects in Shanghai who started their fashion design company.
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="container projects__project">
-                <h3 class="project__title" id="paris-web.fr">paris-web.fr</h3>
+                <div class="container projects__project">
+                    <h3 class="project__title" id="paris-web.fr">paris-web.fr</h3>
 
-                <a class="project__illustration illustration--paris-web" href="https://paris-web.fr/">
-                    <img class="project__thumbnail" src="img/thumbnails/paris-web.fr.jpg" width="960" height="240" alt="">
-                </a>
+                    <a class="project__illustration illustration--paris-web" href="https://paris-web.fr/" aria-label="Link to paris-web.fr">
+                        <img class="project__thumbnail" src="img/thumbnails/paris-web.fr.jpg" width="960" height="240" alt="">
+                    </a>
 
-                <div class="project__description">
-                    <p>
-                        <strong>2006 ~&nbsp;2009</strong>: As part of <a href="https://paris-web.fr/">Paris Web</a> team, I participated to the organization and integration of the related websites. The whole process was fun! Helping speakers before, during and after the event was one of the most rewarding experiences ever. It was also a nice introduction to working remotely, with people in France, New‑Caledonia and China.
-                    </p>
+                    <div class="project__description">
+                        <p>
+                            <strong>2006 ~&nbsp;2009</strong>: As part of <a href="https://paris-web.fr/">Paris Web</a> team, I participated to the organization and integration of the related websites. The whole process was fun! Helping speakers before, during and after the event was one of the most rewarding experiences ever. It was also a nice introduction to working remotely, with people in France, New‑Caledonia and China.
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="container projects__project">
-                <h3 class="project__title" id="pompage.net">pompage.net</h3>
+                <div class="container projects__project">
+                    <h3 class="project__title" id="pompage.net">pompage.net</h3>
 
-                <a class="project__illustration illustration--pompage" href="http://www.pompage.net/about">
-                    <img class="project__thumbnail" src="img/thumbnails/pompage.net.jpg" width="960" height="240" alt="">
-                </a>
+                    <a class="project__illustration illustration--pompage" href="http://www.pompage.net/about" aria-label="Link to pompage.net">
+                        <img class="project__thumbnail" src="img/thumbnails/pompage.net.jpg" width="960" height="240" alt="">
+                    </a>
 
-                <div class="project__description">
-                    <p>
-                        <strong>2003 ~&nbsp;2013</strong>: <a href="http://www.pompage.net/about">http://www.pompage.net/about</a> I didn’t design the website but I was maintaining it on my spare time, along with translating, proof‑reading and publishing. Being part of this team for 10 years has been awesome and set the path I am still following to this day.
-                    </p>
+                    <div class="project__description">
+                        <p>
+                            <strong>2003 ~&nbsp;2013</strong>: <a href="http://www.pompage.net/about">http://www.pompage.net/about</a> I didn’t design the website but I was maintaining it on my spare time, along with translating, proof‑reading and publishing. Being part of this team for 10 years has been awesome and set the path I am still following to this day.
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="container">
-            <hr>
+            <section class="container">
+                <hr>
 
-            <p>
-                In the hope of hearing of you soon, I wish you a very good day!
-            </p>
-        </section>
+                <p>
+                    In the hope of hearing of you soon, I wish you a very good day!
+                </p>
+            </section>
+        </main>
 
-        <script src="https://code.jquery.com/jquery-2.2.2.min.js"
-            integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
             crossorigin="anonymous"></script>
         <script src="Minimap.js"></script>
     </body>

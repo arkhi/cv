@@ -104,11 +104,17 @@
             minimap.headers.push( $item );
         });
 
-        this.$ = $( '<ul>', {
+        this.$list = $( '<ul>', {
             'class': 'c-minimap'
-        });
+        })
 
-        $( 'body' ).prepend( this.$.append( minimap.headers ) );
+        this.$list.append( this.headers );
+
+        this.$ = $( '<nav>', {
+            'role': 'navigation'
+        } );
+
+        $( 'body' ).prepend( this.$.append( this.$list ) );
 
         return minimap;
     };
