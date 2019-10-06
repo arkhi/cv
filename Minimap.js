@@ -1,18 +1,23 @@
+/* global $ */
+/* eslint consistent-this: ["error", "minimap"] */
+/* eslint id-length: ["error", { "exceptions": ["$"] }] */
+
 /**
  * Generate a minimap of the current document.
  * The script does not take sections into account.
  *
  * @return {object} Minimap Contructor.
  */
-(function() {
+( function Minimaper () {
     'use strict';
 
     /**
      * Header contructor
      *
      * @param {Object} domObject DOM object.
+     * @return {mixed} Header Instance | undefined.
      */
-    function Header( domObject ) {
+    function Header ( domObject ) {
         if ( !( this instanceof Header ) ) {
             return new Header( domObject );
         }
@@ -24,64 +29,60 @@
     /**
      * Fetch and add data to object.
      *
-     * @return {Header}
+     * @return {Header} Header Instance
      */
-    Header.prototype.fetchHeaderData = function fetchHeaderData() {
-        var header = this;
+    Header.prototype.fetchHeaderData = function fetchHeaderData () {
+        this.tag   = this.dom.tagName.toLowerCase();
+        this.title = this.$target.html();
+        this.top   = this.$target.offset().top;
 
-        header.tag   = header.dom.tagName.toLowerCase();
-        header.title = header.$target.html();
-        header.top   = header.$target.offset().top;
-
-        return header;
+        return this;
     };
 
     /**
      * Compute the top position of a header in percentage.
      *
-     * @return {Header}
+     * @return {Header} Header Instance
      */
-    Header.prototype.percentTop = function percentTop() {
-        var header    = this;
-        var $document = $( document );
+    Header.prototype.percentTop = function percentTop () {
+        const $document  = $( document );
+        const MaxPerCent = 100;
 
-        header.top = header.top * 100 / $document.innerHeight();
+        this.top = this.top * MaxPerCent / $document.innerHeight();
 
-        return header;
+        return this;
     };
 
     /**
      * Build the DOM structure for minimap headers and existing headers.
      *
      * @param  {Integer} index Index allowing to differentiate the header.
-     * @return {Header}
+     * @return {Header}  Header Instance
      */
-    Header.prototype.build = function build( index ) {
-        var header = this;
+    Header.prototype.build = function build ( index ) {
+        this.fetchHeaderData();
 
-        header.fetchHeaderData();
+        this.targetId = this.$target.attr( 'id' ) || `c-minimap__${ this.tag }-${ index }`;
 
-        header.targetId = header.$target.attr( 'id' ) || 'c-minimap__' + header.tag + '-' + index;
+        this.$target.attr( 'id', this.targetId );
 
-        header.$target.attr( 'id', header.targetId );
+        this.$root = $( '<a>', {
+            title: this.title,
+            class: `c-minimap__link c-minimap__${ this.tag }`,
+            href:  `#${ this.targetId }`,
+        } ).css( {
+            top: `${ this.percentTop().top }%`,
+        } );
 
-        header.$ = $( '<a>', {
-            'title': header.title,
-            'class': 'c-minimap__link c-minimap__' + header.tag,
-            'href':  '#' + header.targetId
-        }).css({
-            'top': header.percentTop().top + '%'
-        });
-
-        return header;
+        return this;
     };
 
     /**
      * Minimap contructor
      *
-     * @return {Minimap}
+     * @return {Minimap} Minimap Instance.
      */
-    function Minimap() {
+    function Minimap () {
         if ( !( this instanceof Minimap ) ) {
             return new Minimap();
         }
@@ -90,47 +91,45 @@
     /**
      * Build the minimap.
      *
-     * @return {Minimap}
+     * @return {Minimap} Minimap Instance.
      */
-    Minimap.prototype.build = function build() {
-        var minimap = this;
+    Minimap.prototype.build = function build () {
+        const minimap = this;
 
         this.headers  = [];
         this.$headers = $( 'h1, h2, h3, h4, h5, h6' );
 
-        this.$headers.each( function( index, header ) {
-            var $item = $( '<li>' ).append( new Header( header ).build( index ).$ );
+        this.$headers.each( ( index, header ) => {
+            const $item = $( '<li>' ).append( new Header( header ).build( index ).$root );
 
             minimap.headers.push( $item );
-        });
+        } );
 
         this.$list = $( '<ul>', {
-            'class': 'c-minimap'
-        })
+            class: 'c-minimap',
+        } );
 
         this.$list.append( this.headers );
 
-        this.$ = $( '<nav>', {
-            'role': 'navigation'
+        this.$root = $( '<nav>', {
+            role: 'navigation',
         } );
 
-        $( 'body' ).prepend( this.$.append( this.$list ) );
+        $( 'body' ).prepend( this.$root.append( this.$list ) );
 
-        return minimap;
+        return this;
     };
 
     /**
      * Initialize Minimap.
      *
-     * @return {Minimap}
+     * @return {Minimap} Minimap Instance.
      */
-    Minimap.prototype.init = function init() {
-        var minimap = this;
+    Minimap.prototype.init = function init () {
+        this.build();
 
-        minimap.build();
-
-        return minimap;
+        return this;
     };
 
     return new Minimap().init();
-})();
+}() );

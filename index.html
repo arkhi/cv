@@ -901,6 +901,8 @@
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
             integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
             crossorigin="anonymous"></script>
-        <script src="Minimap.js"></script>
+        <script>
+            (function t(){"use strict";function t(i){if(!(this instanceof t)){return new t(i)}this.dom=i;this.$target=$(i)}t.prototype.fetchHeaderData=function e(){this.tag=this.dom.tagName.toLowerCase();this.title=this.$target.html();this.top=this.$target.offset().top;return this};t.prototype.percentTop=function s(){const t=$(document);const i=100;this.top=this.top*i/t.innerHeight();return this};t.prototype.build=function h(t){this.fetchHeaderData();this.targetId=this.$target.attr("id")||`c-minimap__${this.tag}-${t}`;this.$target.attr("id",this.targetId);this.$root=$("<a>",{title:this.title,"class":`c-minimap__link c-minimap__${this.tag}`,href:`#${this.targetId}`}).css({top:`${this.percentTop().top}%`});return this};function i(){if(!(this instanceof i)){return new i}}i.prototype.build=function n(){const i=this;this.headers=[];this.$headers=$("h1, h2, h3, h4, h5, h6");this.$headers.each((e,s)=>{const h=$("<li>").append(new t(s).build(e).$root);i.headers.push(h)});this.$list=$("<ul>",{"class":"c-minimap"});this.$list.append(this.headers);this.$root=$("<nav>",{role:"navigation"});$("body").prepend(this.$root.append(this.$list));return this};i.prototype.init=function r(){this.build();return this};return(new i).init()})();
+        </script>
     </body>
 </html>
